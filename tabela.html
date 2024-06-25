@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Como usar table no HTML</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	
+		<style>
+			* {box-sizing: border-box;}
+
+			body {font-family: Arial, Helvetica, sans-serif;}
+			
+			.header,.main,.footer{max-width:1200px;margin:auto}
+			
+			.header {background-color: #f1f1f1;padding: 30px;text-align: center;font-size: 35px;}
+			
+			.footer {background-color: #f1f1f1;padding: 10px;text-align: center;}
+			
+			table{width:100% }
+			
+			table, th, td, caption{
+				border:1px solid #c0c0c0;
+				border-collapse:collapse;padding:5px
+			}
+			
+			table caption{
+				background-color:#d9d9d9;
+				font-weight:bold
+			}
+			
+			tbody tr:nth-child(odd) {
+				background-color: #f2f2f2;
+			}
+			
+			td:nth-child(3),tfoot td:nth-child(2) {
+				text-align:right;
+				font-weight:bold
+			}
+			
+			td:nth-child(3){
+				width:30%
+			}
+
+			@media (max-width: 600px) { table caption{display:none; }}
+		</style>
+	</head>
+	<body>
+
+		<header class="header">
+			<h1>Tabelas</h1>
+		</header>
+
+		<main class="main">
+			
+			<table>
+				<caption>Estoque</caption>
+				<colgroup>
+					<col span="2">
+					<col span="1" style="background-color:#f2f2f2">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Livros</th>
+						<th>Quantidade</th>
+                        <th>Valor</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>E assim que começa</td>
+						<td>10</td>
+						<td>R$ 40,00</td>
+					</tr>
+					<tr>
+						<td>A Biblioteca da meia noite</td>
+						<td>5</td>
+						<td>R$ 35,00</td>
+					</tr>
+					<tr>
+						<td>João e Maria</td>
+						<td>2</td>
+						<td>R$ 25,00</td>
+					</tr>
+					<tr>
+						<td>E assim que acaba</td>
+						<td>10</td>
+						<td>R$ 15,00</td>
+					</tr>
+					<tr>
+						<td>Antes de partir</td>
+						<td>5</td>
+						<td>R$ 60,00</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td></td>
+						<td>Total</td>
+						<td>R$ 1.075,00</td>
+					</tr>
+				</tfoot>
+			</table>
+		
+		
+		</main>
+
+		
+		</footer>
+
+	</body>
+</html>
